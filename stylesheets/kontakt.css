@@ -1,0 +1,13 @@
+#main{
+    background: url("../images/carrier/background.jpg") center;
+
+}
+#tile-txt-3-1{
+    margin-bottom: 0;
+}
+#imgtile-2{
+    background: url("../images/about us/background colour.jpg") center;
+}
+input,textarea,button{
+    font-size: 14px !important;
+}

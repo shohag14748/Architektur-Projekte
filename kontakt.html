@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Architektur Projekte</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <link rel="stylesheet" href="./stylesheets/styles.css">
+    <link rel="stylesheet" href="./stylesheets/triple-field.css">
+    <link rel="stylesheet" href="./stylesheets/kontakt.css">
+  </head>
+  <body>
+    <div id="AppWrapper">
+      <div id="Page">
+        <div class="header">
+          <div class="hamburger"><span></span></div>
+          <a class="header-img-div" href="index.html">
+            <img class="header-logo grey-image" src="./images/header-logo.JPG">
+          </a>
+          <nav class="nav">
+            <a id="nav-link-home" class="nav-link" href="index.html">HOME</a>
+            <a id="nav-link-über uns" class="nav-link" href="über-uns.html">ÜBER UNS</a>
+            <div id="nav-link-projekte" class="nav-link dropdown-link">PROJEKTE
+              <div class="dropdown-menu">
+                <a id="nav-link-architektur" class="nav-link dropdown" href="architektur-projects.html">ARCHITEKTUR</a>
+                <a id="nav-link-innenarchitektur" class="nav-link dropdown" href="innenarchitektur-projects.html">INNENARCHITEKTUR</a>
+                <a id="nav-link-projektsteuerung" class="nav-link dropdown" href="projektsteuerung-projects.html">PROJEKTSTEUERUNG</a>
+              </div>
+            </div>
+            <a id="nav-link-aktuelles" class="nav-link" href="aktuelles.html">AKTUELLES</a>
+            <a id="nav-link-kunden" class="nav-link" href="kunden.html">KUNDEN</a>
+            <a id="nav-link-karriere" class="nav-link" href="karriere.html">KARRIERE</a>
+            <a id="nav-link-kontakt" class="nav-link current-page" href="kontakt.html">KONTAKT</a>
+          </nav>
+          <div class="hamburger"><span></span></div>
+        </div>
+        <div id="main">
+          <div id="tile-field">
+            <div id="tile-1" class="tile">
+              <h3 id="tile-header-3" class="tile-header">Wir freuen uns auf Ihre Bewerbung. Diese richten Sie bitte an:</h3>
+              <p id="tile-txt-1-1" class="tile-txt">Wolfgramm Architekten</p>
+              <p id="tile-txt-1-2" class="tile-txt">Heimhuder Strasse 54 - 20148 Hamburg</p>
+              <p id="tile-txt-1-3" class="tile-txt bold">bewerbung@wolfgramm-architekten.de</p>
+            </div>
+            <div id="imgtile-2" class="imgtile">
+              <h2 class="imgtile-content">KONTAKT</h2>
+            </div>
+            <div id="tile-3" class="tile">
+              <h3 id="tile-header-3" class="tile-header">Get in touch with us</h3>
+                <form action="./sendemail.php" method="post">
+                  <input type="text" name="name" class="form-control mb-2" placeholder="Enter your Name">
+                  <input type="text" name="email" class="form-control mb-2" placeholder="Enter your Email">
+                  <input type="text" name="subject" class="form-control mb-2" placeholder="Subject">
+                  <textarea name="message" id="" cols="30" rows="5" placeholder="Message" class="form-control mb-2"></textarea>
+                  <button type="Submit" name="submit" class="btn btn-secondary">Submit</button>
+                </form>
+            </div>
+          </div>
+        </div>
+        <footer>
+          <a id="impressum-link" class="footer-link" href="impressum.html">Impressum</a>
+          <a id="datenschutz-link" class="footer-link" href="datenschutz.html">Datenschutz</a>
+        </footer>
+      </div>
+    </div>
+    <script src="src/code.jquery.com_jquery-3.7.0.min.js" type="module"></script>
+    <script src="src/main.js" type="module"></script>
+  </body>
+</html>

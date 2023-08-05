@@ -1,0 +1,39 @@
+p {
+    margin-bottom: 0;
+}
+.btn-show-all{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    line-height: 0.1em;
+    font-size: 4em;
+    color: #aaa;
+}
+#main{
+    background: url("../images/about us/background.jpg") center;
+}
+.tile {
+    padding-right: 0;
+    padding-bottom: 1em;
+}
+.scrollableContent {
+    overflow-y: scroll;
+    max-height: 42vh;
+}
+
+@media only screen and (max-height: 900px) {
+    .scrollableContent {
+        max-height: 50vh;
+    }
+}
+#tile-header-1 {
+    margin-bottom: 1.5em;
+}
+#tile-header-3 {
+    margin-bottom: 0.3em;
+}
+#imgtile-2{
+    background: url("../images/about us/background colour.jpg") center;
+}
