@@ -115,6 +115,9 @@ a:hover {
   background-color: #eee;
 }
 
+.header-img-div:hover{
+  background-color: transparent;
+}
 /* Header */
 
 .header {
