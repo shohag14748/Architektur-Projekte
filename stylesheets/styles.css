@@ -245,6 +245,7 @@ border-bottom: 4px solid transparent;
 .nav>.nav-link .nav-link {
   border-bottom: 2px solid rgba(0, 0, 0, 0);
 }
+.nav>.nav-link .nav-link.current-page,
 .nav>.nav-link .nav-link:hover {
   border-bottom: 2px solid #000;
 }
@@ -327,29 +328,39 @@ border-bottom: 4px solid transparent;
   }
   .hamburger span::before{
     content: '';
-    width: 30px;
+    width: 20px;
     height: 2px;
     transform: translateY(-11px);
     background-color: #000;
     display: block;
     transition: .3s;
+    margin-left: auto;
   }
   .hamburger span::after{
     content: '';
-    width: 30px;
+    width: 25px;
     height: 2px;
     transform: translateY(9px);
     background-color: #000;
     display: block;
     transition: .3s;
+    margin-left: auto;
   }
-  .hamburger:hover span,.hamburger.active span{
+  .hamburger.active span{
     background-color: transparent;
   }
-  .hamburger:hover span::before,.hamburger.active span::before{
+  .hamburger:hover span::before{
+    width: 30px;
+  }
+  .hamburger.active span::before{
+    width: 30px;
     transform: translateY(-0px) rotate(-45deg);
   }
-  .hamburger:hover span::after,.hamburger.active span::after{
+  .hamburger:hover span::after{
+    width: 30px;
+  }
+  .hamburger.active span::after{
+    width: 30px;
     transform: translateY(-2px) rotate(45deg);
   }
   .nav-active .nav{
