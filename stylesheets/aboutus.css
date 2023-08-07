@@ -39,6 +39,9 @@ p {
     overflow-y: scroll;
     max-height: 42vh;
 }
+.scrollableContent img{
+    margin-top: 20px;
+}
 
 @media only screen and (min-height: 600px) {
     .scrollableContent {
