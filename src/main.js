@@ -19,27 +19,26 @@ $(document).ready(function () {
         $(".detail-field .tile-img-div").addClass('detail-img');
         $(".detail-field *").removeClass('hidden');
         $(".detail-field .tile-label").addClass('detail-label');
-        $(".detail-field .tile-remaining-imgs").prepend(`<div class="img-div d-none"><img id="tile-img-0" class="tile-remaining-img grey-image" src=""></div>`);
-        $(".detail-field #tile-img-0").attr('src',$(this).find('.tile-img-div .tile-img').attr('src'));
+        $(".detail-field .img-div:first-child").addClass('active');
         $(".detail-field").prepend(`<p class="btn close-btn"><i class="fas fa-angle-left"></i>ZURÜCK</p>`);
         
     })
     $(document).on('click','.img-div', function(){
-        $(this).addClass('d-none').siblings().removeClass('d-none');
+        $(this).addClass('active').siblings().removeClass('active');
         $(this).parents('.tile-remaining-imgs').siblings('.tile-img-div').find('.tile-img').attr('src',$(this).find('img').attr('src'));
     })
     $(document).on('click','.next-img-btn', function(){
-        if($(this).parents('.tile-img-div').siblings('.tile-remaining-imgs').find('.img-div.d-none').index() == $(this).parents('.tile-img-div').siblings('.tile-remaining-imgs').find('.img-div').last().index()){
+        if($(this).parents('.tile-img-div').siblings('.tile-remaining-imgs').find('.img-div.active').index() == $(this).parents('.tile-img-div').siblings('.tile-remaining-imgs').find('.img-div').last().index()){
             $(this).parents('.tile-img-div').siblings('.tile-remaining-imgs').find('.img-div:first-child').click();
         }else{
-            $(this).parents('.tile-img-div').siblings('.tile-remaining-imgs').find('.img-div.d-none').next().click();
+            $(this).parents('.tile-img-div').siblings('.tile-remaining-imgs').find('.img-div.active').next().click();
         }
     });
     $(document).on('click','.prev-img-btn', function(){
-        if($(this).parents('.tile-img-div').siblings('.tile-remaining-imgs').find('.img-div.d-none').index() == $(this).parents('.tile-img-div').siblings('.tile-remaining-imgs').find('.img-div').first().index()){
+        if($(this).parents('.tile-img-div').siblings('.tile-remaining-imgs').find('.img-div.active').index() == $(this).parents('.tile-img-div').siblings('.tile-remaining-imgs').find('.img-div').first().index()){
             $(this).parents('.tile-img-div').siblings('.tile-remaining-imgs').find('.img-div:last-child').click();
         }else{
-            $(this).parents('.tile-img-div').siblings('.tile-remaining-imgs').find('.img-div.d-none').prev().click();
+            $(this).parents('.tile-img-div').siblings('.tile-remaining-imgs').find('.img-div.active').prev().click();
         }
     });
     $(document).on('click','.close-btn', function(){

@@ -2,13 +2,14 @@
     display: grid;
     position: relative;
     grid-template-rows: repeat(2, 49.6%);
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, calc(33.33% - 7.33px));
     gap: 10px;
     height: calc(100% - 10px);
     width: 90%;
     max-width: 1250px;
-    justify-content: center;
     margin: auto;
+    overflow: hidden;
+    min-height: 400px;
 }
 .tile{
     height: 100%;
@@ -42,8 +43,8 @@
     bottom: 0;
     padding: 0.5em 0;
     margin: 0;
-    font-size: 1.2em;
-    line-height: 0.9em;
+    font-size: 1em;
+    line-height: 1.2;
     text-align: center;
     font-weight: 100;
     color: #999;
@@ -66,14 +67,15 @@
 .detail-link{
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 4fr 1fr;
+    grid-template-rows: 100%;
     cursor: initial;
 }
 .detail-label{
     display: block;
     position: relative;
-    margin: 2rem;
+    margin: 1rem 2rem;
     text-align: left;
+    font-size: 1.2em;
 }
 .tile-summary{
     font-weight: bold;
@@ -88,14 +90,14 @@
     text-align: justify;
 }
 .detail-field .tile-txt{
-    height: 88%;
+    height: calc(100% - 13vw);
     overflow-y: auto;
     overflow-x: hidden;
 }
 .detail-img-div{
     position: relative;
     width: 100%;
-    grid-row: 1/3;
+    /* grid-row: 1/3; */
     /* aspect-ratio: 3/2; */
 }
 .detail-img {
@@ -128,13 +130,18 @@
     position: absolute;
     width: 30%;
     left: 66.666%;
-    height: 120%;
+    /* height: 120%; */
     bottom: 0;
+    flex-flow: wrap;
 }
 .img-div {
-    flex: 1 1 0;
+    /* flex: 1 1 0; */
     min-width: 0;
     cursor: pointer;
+    width: 33.33%;
+}
+.img-div.active img{
+    filter: grayscale(0);
 }
 .tile-remaining-img {
     width: 100%;
@@ -180,4 +187,13 @@
         top: -5px;
         height: calc(100% + 10px);
     }
+    .tile-field {
+        overflow: visible;
+        min-height: auto;
+        margin-bottom: 5px;
+    }
+    .tile-img-div{
+        height: 65vw;
+    }
+
 }

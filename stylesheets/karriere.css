@@ -9,7 +9,9 @@
 #imgtile-2{
     background: url("../images/carrier/background colour.jpg") center;
 }
-
+.tile-img{
+    height: 13vw !important;
+}
 .scrollableContent {
     overflow-y: auto;
     overflow-x: hidden;
@@ -35,4 +37,9 @@
     .scrollableContent {
         max-height: 162px;
     }
+}
+@media only screen and (max-width: 767px) {
+.scrollableContent {
+    max-height: 100% !important;
+}
 }

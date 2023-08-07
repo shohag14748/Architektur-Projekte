@@ -40,9 +40,14 @@ p {
     max-height: 42vh;
 }
 
-@media only screen and (max-height: 900px) {
+@media only screen and (min-height: 600px) {
     .scrollableContent {
-        max-height: 50vh;
+        max-height: calc(100vh - 223px - 11vw);
+    }
+}
+@media only screen and (min-height: 901px) {
+    .scrollableContent {
+        max-height: calc(100vh - 223px - 12vw);
     }
 }
 #tile-header-1 {
