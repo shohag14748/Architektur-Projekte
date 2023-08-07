@@ -3,8 +3,8 @@
   src: url("./font/Trajan\ Pro.ttf");
 }
 
-:root {
-}
+/* :root {
+} */
 @keyframes removeGreyScale {
   from {
     filter: grayscale(100%);
@@ -17,7 +17,7 @@
 * {
   margin: 0;
   padding: 0;
-  user-select: none;
+  /* user-select: none; */
 }
 
 /* box-sizing and font sizing */
@@ -159,8 +159,12 @@ a:hover {
   flex-direction: column;
   position: absolute;
   margin-top: -0.1px;
-  padding: 0.2em;
+  padding: 1em;
   font-size: 0.7em;
+}
+.dropdown-menu .nav-link{
+  padding: .85rem 0rem .13rem;
+  display: inline-block;
 }
 
 .dropdown {
@@ -217,7 +221,7 @@ footer i {
 
 @media (max-width: 28.75em) {
   footer {
-    flex-direction: column;
+    /* flex-direction: column; */
     text-align: center;
   }
 }
@@ -232,7 +236,10 @@ footer i {
 }
 .nav>.nav-link {
 padding: 5px 0;
+cursor: pointer;
+border-bottom: 4px solid transparent;
 }
+.nav>.nav-link.current-page,
 .nav>.nav-link:hover {
   border-bottom: 4px solid #000;
 }
@@ -245,10 +252,13 @@ padding: 5px 0;
 @media (max-width:1250px){
   .nav-link {
     font-size: .8em;
-    margin: 0 0.5em;
+    margin: 0 1.2em;
   }
   .dropdown-menu{
     font-size: 1em;
+  }
+  .dropdown-menu .nav-link{
+    margin: 0;
   }
 }
 @media (min-width:768px){
@@ -260,6 +270,9 @@ padding: 5px 0;
   }
   .dropdown-link:hover .dropdown-menu{
     display: block !important;
+  }
+  .dropdown-link:hover{
+    border-color: transparent !important;
   }
 }
 *{
@@ -345,9 +358,28 @@ padding: 5px 0;
     flex-direction: column;
   }
   .nav-active .nav .nav-link {
-    width: 150px;
+    width: auto;
     text-align: center;
     margin: 5px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .dropdown-link span{
+    position: relative;
+  }
+  .dropdown-link:hover span::after,
+  .dropdown-link.current-page span::after{
+    content: '';
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    top: 21px;
+  }
+  .nav>.dropdown-link.current-page, .nav>.dropdown-link:hover{
+    border-color: transparent;
   }
   .dropdown-link:hover .dropdown-menu{
     display: none;
@@ -359,5 +391,9 @@ padding: 5px 0;
     margin-top: 10px;
     background-color: transparent;
     border: 0;
+    text-align: center;
+  }
+  .dropdown-menu .nav-link{
+    display: inline-block;
   }
 }

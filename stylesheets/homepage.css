@@ -13,6 +13,7 @@
 }
 .tile{
     height: 100%;
+    position: relative;
 }
 .tile-link {
     display: block;
@@ -23,7 +24,7 @@
     width: 100%;
     object-fit: cover;
     display: block;
-}
+} 
 .tile-label {
     text-align: center;
     padding: 0.5em;
@@ -33,13 +34,22 @@
     border-bottom: #000 4px solid;
     position: absolute;
     left: 50%;
-    bottom: 30%;
+    bottom: 40%;
     transform: translateX(-50%);
+    transition: .3s;
+}
+.tile-link:hover .tile-label{
+    background-color: #000;
+    color: #fff;
 }
 @media (max-width:767px){
     #tile-field{
         display: flex;
         flex-direction: column;
         overflow:visible;
+    }
+    .tile-link {
+        display: block;
+        height: 70vw;
     }
 }

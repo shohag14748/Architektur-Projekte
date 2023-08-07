@@ -15,7 +15,7 @@ p {
     background: url("../images/about us/background.jpg") center;
 }
 .tile {
-    padding-right: 0;
+    padding-right: .5rem;
     padding-bottom: 1em;
 }
 .scrollableContent {
@@ -25,7 +25,7 @@ p {
 
 @media only screen and (max-height: 900px) {
     .scrollableContent {
-        max-height: 50vh;
+        max-height: 42vh;
     }
 }
 #tile-header-1 {
@@ -36,4 +36,8 @@ p {
 }
 #imgtile-2{
     background: url("../images/about us/background colour.jpg") center;
+}
+
+.tile-txt{
+    margin-bottom: 20px;
 }

@@ -32,7 +32,7 @@ p {
     background: url("../images/about us/background.jpg") center;
 }
 .tile {
-    padding-right: 0;
+    padding-right: .5em;
     padding-bottom: 1em;
 }
 .scrollableContent {

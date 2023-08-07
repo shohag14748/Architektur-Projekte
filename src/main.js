@@ -4,7 +4,9 @@ $(document).ready(function () {
         $('.header').toggleClass('nav-active')
     })
     $('.dropdown-link').click(function(){
-        $(this).find('.dropdown-menu').slideToggle();
+        if($(window).width()<768){    
+            $(this).find('.dropdown-menu').slideToggle();
+        }
     })
 
     $('.tile-link').click(function(){

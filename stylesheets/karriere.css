@@ -1,5 +1,6 @@
 #main{
     background: url("../images/carrier/background.jpg") center;
+    min-height: 400px;
 
 }
 #tile-txt-3-1{
@@ -7,4 +8,31 @@
 }
 #imgtile-2{
     background: url("../images/carrier/background colour.jpg") center;
+}
+
+.scrollableContent {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 42vh;
+}
+
+@media only screen and (max-height: 900px) {
+    .scrollableContent {
+        max-height: 33vh;
+    }
+}
+@media only screen and (max-height: 800px) {
+    .scrollableContent {
+        max-height: 31vh;
+    }
+}
+@media only screen and (max-height: 700px) {
+    .scrollableContent {
+        max-height: 28vh;
+    }
+}
+@media only screen and (max-height: 630px) {
+    .scrollableContent {
+        max-height: 162px;
+    }
 }
