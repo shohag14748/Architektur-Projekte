@@ -328,7 +328,7 @@ border-bottom: 4px solid transparent;
   }
   .hamburger span::before{
     content: '';
-    width: 20px;
+    width: 30px;
     height: 2px;
     transform: translateY(-11px);
     background-color: #000;
@@ -338,7 +338,7 @@ border-bottom: 4px solid transparent;
   }
   .hamburger span::after{
     content: '';
-    width: 25px;
+    width: 30px;
     height: 2px;
     transform: translateY(9px);
     background-color: #000;

@@ -21,7 +21,8 @@ $(document).ready(function () {
         $(".detail-field .tile-label").addClass('detail-label');
         $(".detail-field .img-div:first-child").addClass('active');
         $(".detail-field").prepend(`<p class="btn close-btn"><i class="fas fa-angle-left"></i>ZURÜCK</p>`);
-        
+        $('.tile-field').addClass('show');
+        window.scrollTo({ top: 0 });
     })
     $(document).on('click','.img-div', function(){
         $(this).addClass('active').siblings().removeClass('active');
@@ -42,7 +43,8 @@ $(document).ready(function () {
         }
     });
     $(document).on('click','.close-btn', function(){
-        $(this).parents('.detail-field').remove()
+        $(this).parents('.detail-field').remove();
+        $('.tile-field').removeClass('show');
     });
 
     
